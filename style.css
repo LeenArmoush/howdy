@@ -177,13 +177,13 @@ body {
     margin-bottom: 20px; /* Add spacing below each h1 */
 }
 
-/* Arrow container positioned at the center-right of the screen */
+/* Arrow container positioned relative to text box */
 .arrow-container {
-    position: fixed; /* Fixes the arrow on the screen */
-    top: 50%; /* Centers the arrow vertically */
-    right: 150px; /* Aligns the arrow to the right side */
-    transform: translateY(-50%); /* Adjusts for exact vertical centering */
-    width: auto; /* Ensures the arrow width is automatically calculated */
+    position: relative; /* Position the arrow relative to the parent container (text box) */
+    display: flex; /* To align arrow on the right side of the container */
+    justify-content: flex-end; /* Push the arrow to the right */
+    width: 100%; /* Full width of the container */
+    padding-right: 20%; /* Add space on the right to move arrow slightly left */
 }
 
 /* Styling for the arrow */
@@ -209,6 +209,7 @@ h1.typewriter {
     line-height: 1.5;
     text-align: center;
     letter-spacing: 1px;
+    padding-bottom: 20px; /* Add some space below the text to separate from the arrow */
 }
 
 /* Smaller arrow size for mobile screens */
@@ -221,3 +222,4 @@ h1.typewriter {
         font-size: 1.5rem; /* Smaller text on mobile */
     }
 }
+
